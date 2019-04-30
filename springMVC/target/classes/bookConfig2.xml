@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:annotation-config/>
+	
+	<bean id="book2" class="com.caps.spring.mix.Book">
+		<property name="name" value="Who moved my cheese"/>
+		<property name="author" ref="author2"></property>
+	</bean>
+
+	<bean id="author2" class="com.caps.spring.mix.Author">
+		<property name="name" value="Forgot"/>
+	</bean>
+	
+	<bean class="com.caps.spring.mix.PersonConfig2"/>
+	
+</beans>

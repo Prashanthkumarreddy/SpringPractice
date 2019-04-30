@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="data" class="com.caps.spring.spel.Data">
+		<property name="currentTime" value="#{T(System).currentTimeMillis()}"/>
+		<property name="randomNum" value="#{T(Math).random()}"></property>
+		<property name="msg" value="#{'This is a String'[3]}"></property>
+	</bean>
+	
+	<bean id="Person" class="com.caps.spring.spel.Person">
+		<property name="name" value="Blake"></property>
+	</bean>
+	
+	<bean id="date" class="java.util.Date"/>
+
+</beans>
